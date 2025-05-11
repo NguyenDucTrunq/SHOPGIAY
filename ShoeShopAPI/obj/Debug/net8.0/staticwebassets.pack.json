@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\SHOPGIAY\\ShoeShopAPI\\wwwroot\\uploads\\7689423c-a597-48ea-8173-63c1b4ac5141_494326002_3871635209814294_1380569499695704974_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\7689423c-a597-48ea-8173-63c1b4ac5141_494326002_3871635209814294_1380569499695704974_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\SHOPGIAY\\ShoeShopAPI\\wwwroot\\uploads\\acd47cac-3e7c-41b0-ae4c-c755c7e5a9fa_494326002_3871635209814294_1380569499695704974_n.jpg",
+      "PackagePath": "staticwebassets\\uploads\\acd47cac-3e7c-41b0-ae4c-c755c7e5a9fa_494326002_3871635209814294_1380569499695704974_n.jpg"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\SHOPGIAY\\ShoeShopAPI\\wwwroot\\uploads\\aceda834-b299-47d5-99a3-5f40d4d864b5_chinhsuadiem.png",
+      "PackagePath": "staticwebassets\\uploads\\aceda834-b299-47d5-99a3-5f40d4d864b5_chinhsuadiem.png"
+    },
+    {
+      "Id": "C:\\Users\\PC\\source\\repos\\SHOPGIAY\\ShoeShopAPI\\wwwroot\\uploads\\c0d67678-e55c-4a7e-87cc-ef8bbcb9bf68_Ảnh chụp màn hình 2025-05-08 091947.png",
+      "PackagePath": "staticwebassets\\uploads\\c0d67678-e55c-4a7e-87cc-ef8bbcb9bf68_Ảnh chụp màn hình 2025-05-08 091947.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ShoeShopAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ShoeShopAPI.props",
+      "PackagePath": "build\\ShoeShopAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ShoeShopAPI.props",
+      "PackagePath": "buildMultiTargeting\\ShoeShopAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ShoeShopAPI.props",
+      "PackagePath": "buildTransitive\\ShoeShopAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

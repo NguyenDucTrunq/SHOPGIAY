@@ -1,0 +1,38 @@
+<header>
+  <div class="top-bar">
+    <img src="assets/images/logo.png" alt="Logo" class="logo-image">
+    <div class="search-bar">
+      <input type="text" placeholder="Tìm kiếm Nike, Adidas, giày mới...">
+      <button>Tìm kiếm</button>
+    </div>
+    <div class="user-actions">
+      <a href="#">Tài khoản</a>
+      <a href="#">Yêu thích</a>
+      <a href="#">Giỏ hàng</a>
+      <div class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+        <button routerLink="/login">Đăng nhập / Đăng ký</button>
+        <div class="dropdown-menu" *ngIf="showDropdown">
+          <a routerLink="/login">Đăng nhập</a>
+          <a routerLink="/register">Đăng ký</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#">Nam</a></li>
+      <li><a href="#">Nữ</a></li>
+      <li><a href="#">Trẻ em</a></li>
+      <li><a href="#">Phụ kiện</a></li>
+      <li><a href="#">Bộ sưu tập</a></li>
+      <li><a href="#">Bóng đá</a></li>
+      <li><a href="#">Thể thao</a></li>
+      <li><a href="#">Khuyến mãi</a></li>
+    </ul>
+  </nav>
+  <div class="promo-bar">
+    <span>CẬP NHẬT HÀNG MỚI</span>
+    <span>JORDAN SHOP NGAY!</span>
+    <span>NIKE AIR MAX 270 SHOP NGAY!</span>
+  </div>
+</header>

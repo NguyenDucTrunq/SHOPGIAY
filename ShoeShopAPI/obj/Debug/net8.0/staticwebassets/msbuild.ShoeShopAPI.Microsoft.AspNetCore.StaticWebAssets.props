@@ -1,0 +1,68 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7689423c-a597-48ea-8173-63c1b4ac5141_494326002_3871635209814294_1380569499695704974_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ShoeShopAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ShoeShopAPI</BasePath>
+      <RelativePath>uploads/7689423c-a597-48ea-8173-63c1b4ac5141_494326002_3871635209814294_1380569499695704974_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\7689423c-a597-48ea-8173-63c1b4ac5141_494326002_3871635209814294_1380569499695704974_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\acd47cac-3e7c-41b0-ae4c-c755c7e5a9fa_494326002_3871635209814294_1380569499695704974_n.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>ShoeShopAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ShoeShopAPI</BasePath>
+      <RelativePath>uploads/acd47cac-3e7c-41b0-ae4c-c755c7e5a9fa_494326002_3871635209814294_1380569499695704974_n.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\acd47cac-3e7c-41b0-ae4c-c755c7e5a9fa_494326002_3871635209814294_1380569499695704974_n.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\aceda834-b299-47d5-99a3-5f40d4d864b5_chinhsuadiem.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ShoeShopAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ShoeShopAPI</BasePath>
+      <RelativePath>uploads/aceda834-b299-47d5-99a3-5f40d4d864b5_chinhsuadiem.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\aceda834-b299-47d5-99a3-5f40d4d864b5_chinhsuadiem.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\c0d67678-e55c-4a7e-87cc-ef8bbcb9bf68_Ảnh chụp màn hình 2025-05-08 091947.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>ShoeShopAPI</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/ShoeShopAPI</BasePath>
+      <RelativePath>uploads/c0d67678-e55c-4a7e-87cc-ef8bbcb9bf68_Ảnh chụp màn hình 2025-05-08 091947.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\c0d67678-e55c-4a7e-87cc-ef8bbcb9bf68_Ảnh chụp màn hình 2025-05-08 091947.png))</OriginalItemSpec>
+    </StaticWebAsset>
+  </ItemGroup>
+</Project>

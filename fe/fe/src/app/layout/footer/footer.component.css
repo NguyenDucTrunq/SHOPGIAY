@@ -17,37 +17,48 @@ app-root {
 .footer {
   background: #222;
   color: #fff;
-  padding: 32px 0 16px 0;
+  padding: 16px 0 8px 0;
   text-align: center;
   margin-top: auto;
+  font-size: 14px;
 }
 .footer-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 16px;
+  padding-bottom: 8px;
 }
 .footer-section {
-  min-width: 200px;
-  margin: 8px 0;
+  min-width: 150px;
+  margin: 4px 0;
 }
-.footer-section h3, .footer-section h4 {
-  margin-bottom: 8px;
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.footer-section h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+.footer-section p {
+  font-size: 12px;
+  margin: 2px 0;
 }
 .footer-section a {
   color: #3ad6b0;
   text-decoration: none;
   margin: 0 4px;
+  font-size: 12px;
 }
 .footer-section a:hover {
   text-decoration: underline;
 }
 .footer-bottom {
   border-top: 1px solid #444;
-  padding-top: 8px;
-  font-size: 14px;
+  padding-top: 4px;
+  font-size: 12px;
   color: #aaa;
 }
 
@@ -60,10 +71,19 @@ footer {
     color: black; 
     text-align: center; 
     padding: 22px; 
-    position: fixed; 
-    bottom: 0; 
-    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
+
+@media (min-height: 600px) {
+  footer {
+    position: static;
+  }
+}
+
 footer nav ul {
     list-style-type: none;
     padding: 0;
@@ -78,4 +98,27 @@ footer nav ul li a {
     color: red;
     text-decoration: none;
     font-size: 17.5px;
-}    
+}
+
+:host {
+  display: block;
+  width: 100%;
+  background-color: #212121;
+  color: white;
+}
+
+.footer-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Clearfix để đảm bảo footer bao quanh hết nội dung */
+.footer-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}

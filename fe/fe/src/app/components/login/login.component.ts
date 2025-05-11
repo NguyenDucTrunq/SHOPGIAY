@@ -27,14 +27,23 @@ export class LoginComponent {
   }
 
   onSubmit() {
-    this.authService.login(this.loginForm.value).subscribe({
-      next: (response) => {
-        this.authService.setUser(response);
-        this.router.navigate(['/home']);
-      },
-      error: (error) => {
-        this.errorMessage = 'Đăng nhập thất bại';
-      }
-    });
+    if (this.loginForm.valid) {
+      const loginData = this.loginForm.value;
+      this.authService.login(loginData).subscribe({
+        next: (user) => {
+          if (user && user.email) {
+            this.authService.setUser(user);
+            this.router.navigate(['/']);
+          } else {
+            this.errorMessage = 'Đăng nhập thất bại';
+          }
+        },
+        error: (error) => {
+          this.errorMessage = 'Đăng nhập thất bại. Vui lòng thử lại.';
+        }
+      });
+    } else {
+      this.errorMessage = 'Vui lòng điền đầy đủ thông tin';
+    }
   }
-} 
+}

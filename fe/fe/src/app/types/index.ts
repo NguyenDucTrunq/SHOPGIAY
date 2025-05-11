@@ -1,26 +1,23 @@
 // User related types
 export interface User {
-  userId?: number;
+  userId: number; // Không còn tùy chọn
   email: string;
   password: string;
-  role?: string;
-  firstName?: string;
-  lastName?: string;
-  phoneNumber?: string;
-  address?: string;
+  role: string; // Không còn tùy chọn, mặc định là 'User' hoặc 'Admin'
 }
 
 // Product related types
 export interface Product {
-  productId: number;
-  name: string;
-  description: string;
+  productID: number;
+  productName: string;
+  description?: string;
   price: number;
-  imageUrl: string;
-  category: string;
-  size: string[];
-  color: string[];
-  stock: number;
+  quantity: number;
+  brand?: string;
+  category?: string;
+  size?: string;
+  imageURL?: string;
+  createdAt: string;
 }
 
 // Order related types
@@ -76,4 +73,4 @@ export interface ApiResponse<T> {
   message: string;
   data?: T;
   errors?: string[];
-} 
+}

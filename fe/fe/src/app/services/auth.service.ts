@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
-import { User, ApiResponse } from '../types';
+import { User } from '../types';
 
 @Injectable({
   providedIn: 'root'
@@ -11,21 +11,27 @@ export class AuthService {
   private userEmailSubject = new BehaviorSubject<string>('');
   userEmail$ = this.userEmailSubject.asObservable();
 
-  constructor(private http: HttpClient) { }
-
-  register(user: User): Observable<ApiResponse<User>> {
-    return this.http.post<ApiResponse<User>>(`${this.apiUrl}/register`, user);
+  constructor(private http: HttpClient) {
+    // Kiểm tra localStorage khi khởi tạo service
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      const user = JSON.parse(userData);
+      this.userEmailSubject.next(user.email);
+    }
   }
 
-  login(user: User): Observable<ApiResponse<User>> {
-    return this.http.post<ApiResponse<User>>(`${this.apiUrl}/login`, user);
+  register(user: User): Observable<User> {
+    return this.http.post<User>(`${this.apiUrl}/register`, user);
   }
 
-  setUser(response: ApiResponse<User>): void {
-    if (response.data) {
-      this.userEmailSubject.next(response.data.email);
-      // Lưu thông tin user vào localStorage nếu cần
-      localStorage.setItem('user', JSON.stringify(response.data));
+  login(user: User): Observable<User> {
+    return this.http.post<User>(`${this.apiUrl}/login`, user);
+  }
+
+  setUser(user: User): void {
+    if (user && user.email) {
+      this.userEmailSubject.next(user.email);
+      localStorage.setItem('user', JSON.stringify(user));
     }
   }
 

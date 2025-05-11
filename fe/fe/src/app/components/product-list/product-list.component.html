@@ -1,0 +1,67 @@
+<div class="page-container">
+  <!-- Sidebar filter -->
+  <div class="filter-sidebar">
+    <div class="filter-section">
+      <h3>Thương hiệu</h3>
+      <div class="brand-filters">
+        <div class="filter-item" *ngFor="let brand of brands">
+          <input 
+            type="checkbox" 
+            [id]="brand" 
+            [value]="brand"
+            [checked]="selectedBrands.has(brand)"
+            (change)="toggleBrandFilter(brand)">
+          <label [for]="brand">{{ brand }}</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-section">
+      <h3>Giá</h3>
+      <div class="price-filters">
+        <div class="price-range">
+          <label for="minPrice">Từ:</label>
+          <input 
+            type="number" 
+            id="minPrice" 
+            [value]="priceRange.min"
+            (input)="updatePriceRange('min', $event)">
+        </div>
+        <div class="price-range">
+          <label for="maxPrice">Đến:</label>
+          <input 
+            type="number" 
+            id="maxPrice" 
+            [value]="priceRange.max"
+            (input)="updatePriceRange('max', $event)">
+        </div>
+        <button class="apply-price" (click)="applyPriceFilter()">Áp dụng</button>
+
+        <div class="quick-price-filters">
+          <button 
+            *ngFor="let range of predefinedPriceRanges" 
+            (click)="applyQuickPriceFilter(range.min, range.max)"
+            [class.active]="isPriceRangeActive(range)">
+            {{ range.label }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product grid -->
+  <div class="product-container">
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of getAllProducts()" [routerLink]="['/product', product.productID]">
+        <div class="image-wrapper">
+          <img [src]="getImageUrl(product.imageURL)" alt="{{ product.productName }}" />
+        </div>
+        <h3>{{ product.productName }}</h3>
+        <div class="price-section">
+          <p class="current-price">{{ product.price | number }} đ</p>
+        </div>
+        <button class="buy-now">Mua ngay</button>
+      </div>
+    </div>
+  </div>
+</div>

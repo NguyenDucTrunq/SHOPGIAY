@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --footer-height: 160px; /* Điều chỉnh theo chiều cao thực của footer */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  width: 100%;
+  padding-bottom: 2rem; /* Tạo khoảng cách giữa nội dung và footer */
+}
+
+app-footer {
+  flex-shrink: 0;
+  background-color: #212121;
+  color: white;
+  width: 100%;
+  padding: 20px 0;
+}

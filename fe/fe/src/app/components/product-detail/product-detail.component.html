@@ -1,0 +1,24 @@
+<div *ngIf="product as p" class="product-detail">
+  <div class="left-section">
+    <div class="image-wrapper">
+      <img [src]="getImageUrl(p.imageURL)" alt="{{ p.productName }}" />
+    </div>
+  </div>
+  <div class="info-section">
+    <h1>{{ p.productName }}</h1>
+    <div class="price-section">
+      <div class="current-price">{{ p.price | number }} đ</div>
+    </div>
+    <div class="details">
+      <p><strong>Mô tả:</strong> {{ p.description }}</p>
+      <p><strong>Thương hiệu:</strong> {{ p.brand }}</p>
+      <p><strong>Danh mục:</strong> {{ p.category }}</p>
+      <p><strong>Kích cỡ:</strong> {{ p.size }}</p>
+      <p><strong>Số lượng còn:</strong> {{ p.quantity }}</p>
+    </div>
+    <div class="actions">
+      <button class="add-to-cart">Thêm vào giỏ hàng</button>
+      <button class="buy-now">Mua ngay</button>
+    </div>
+  </div>
+</div>

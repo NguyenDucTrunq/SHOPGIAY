@@ -2,32 +2,35 @@
   <div class="top-bar">
     <img src="assets/images/logo.png" alt="Logo" class="logo-image">
     <div class="search-bar">
-      <input type="text" placeholder="Tìm kiếm Nike, Adidas, giày mới...">
-      <button>Tìm kiếm</button>
+      <input 
+        type="text" 
+        [(ngModel)]="searchTerm"
+        (keyup.enter)="search()"
+        placeholder="Tìm kiếm Nike, Adidas, giày mới...">
+      <button (click)="search()">Tìm kiếm</button>
     </div>
     <div class="user-actions">
-      <a href="#">Tài khoản</a>
-      <a href="#">Yêu thích</a>
       <a href="#">Giỏ hàng</a>
-      <div class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
-        <button routerLink="/login">Đăng nhập / Đăng ký</button>
-        <div class="dropdown-menu" *ngIf="showDropdown">
-          <a routerLink="/login">Đăng nhập</a>
-          <a routerLink="/register">Đăng ký</a>
+      <ng-container *ngIf="userEmail && userEmail !== ''; else showLogin">
+        <div class="user-name" style="display: inline-block; margin-left: 10px;">
+          <span style="margin-right: 10px;">{{ userEmail }}</span>
+          <button class="logout-btn" (click)="logout()">Đăng xuất</button>
         </div>
-      </div>
+      </ng-container>
+      <ng-template #showLogin>
+        <button routerLink="/login">Đăng nhập</button>
+      </ng-template>
     </div>
   </div>
   <nav>
     <ul>
+      <li><a routerLink="/">Trang chủ</a></li>
+      <li><a routerLink="/products">Sản phẩm</a></li> 
       <li><a href="#">Nam</a></li>
       <li><a href="#">Nữ</a></li>
       <li><a href="#">Trẻ em</a></li>
-      <li><a href="#">Phụ kiện</a></li>
-      <li><a href="#">Bộ sưu tập</a></li>
       <li><a href="#">Bóng đá</a></li>
       <li><a href="#">Thể thao</a></li>
-      <li><a href="#">Khuyến mãi</a></li>
     </ul>
   </nav>
   <div class="promo-bar">
